@@ -26,7 +26,7 @@ public class TinyVGDrawableLogic implements DrawableLogic {
     @Override
     public void draw(Batch batch, int entity, float parentAlpha, RenderingType renderingType) {
         if (drawer == null)
-            drawer = new TinyVGShapeDrawer(batch, sceneLoader.getRm().getTextureRegion("white-pixel"));
+            drawer = new CpuTinyVGShapeDrawer(batch, sceneLoader.getRm().getTextureRegion("white-pixel"));
 
         tmpColor.set(batch.getColor());
 
