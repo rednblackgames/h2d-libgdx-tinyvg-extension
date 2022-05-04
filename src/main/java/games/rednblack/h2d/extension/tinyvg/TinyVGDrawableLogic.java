@@ -1,7 +1,6 @@
 package games.rednblack.h2d.extension.tinyvg;
 
 import com.artemis.ComponentMapper;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import dev.lyze.gdxtinyvg.drawers.TinyVGShapeDrawer;
 import games.rednblack.editor.renderer.SceneLoader;
@@ -17,8 +16,6 @@ public class TinyVGDrawableLogic implements DrawableLogic {
 
     protected SceneLoader sceneLoader;
 
-    private final Color tmpColor = new Color();
-
     private TinyVGShapeDrawer drawer;
 
     public TinyVGDrawableLogic() { }
@@ -28,8 +25,6 @@ public class TinyVGDrawableLogic implements DrawableLogic {
         if (drawer == null)
             drawer = new CpuTinyVGShapeDrawer(batch, sceneLoader.getRm().getTextureRegion("white-pixel"));
 
-        tmpColor.set(batch.getColor());
-
         TintComponent tintComponent = tintComponentComponentMapper.get(entity);
         TinyVGComponent tinyVGComponent = tinyVGComponentMapper.get(entity);
         TransformComponent transformComponent = transformComponentMapper.get(entity);
@@ -37,10 +32,9 @@ public class TinyVGDrawableLogic implements DrawableLogic {
         TransformMathUtils.computeTransform(transformComponent).mulLeft(batch.getTransformMatrix());
         TransformMathUtils.applyTransform(batch, transformComponent);
 
-        batch.setColor(tintComponent.color);
+        drawer.setColor(tintComponent.color);
         tinyVGComponent.tinyVG.draw(drawer);
 
         TransformMathUtils.resetTransform(batch, transformComponent);
-        batch.setColor(tmpColor);
     }
 }
