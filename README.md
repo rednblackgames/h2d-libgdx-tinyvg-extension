@@ -30,9 +30,9 @@ dependencies {
 
 **TinyVG Runtime compatibility**
 
-| HyperLap2D        | gdx-TinyVG         |
-|-------------------| ------------------ |
-| 0.1.0-SNAPSHOT    | 7a8927633e         |
+| HyperLap2D | gdx-TinyVG         |
+|------------| ------------------ |
+| 0.1.0      | 7a8927633e         |
 
 ### License
 HyperLap2D's libGDX runtime TinyVG extension is licensed under the Apache 2.0 License. You can use it free of charge, without limitations both in commercial and non-commercial projects. We love to get (non-mandatory) credit in case you release a game or app using HyperLap2D!
