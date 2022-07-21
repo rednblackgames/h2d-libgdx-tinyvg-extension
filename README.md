@@ -23,7 +23,7 @@ dependencies {
 <dependency>
   <groupId>games.rednblack.hyperlap2d</groupId>
   <artifactId>libgdx-tinyvg-extension</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <type>pom</type>
 </dependency>
 ```
@@ -32,6 +32,7 @@ dependencies {
 
 | HyperLap2D | gdx-TinyVG         |
 |------------| ------------------ |
+| 0.1.1      | 7a8927633e         |
 | 0.1.0      | 7a8927633e         |
 
 ### License
