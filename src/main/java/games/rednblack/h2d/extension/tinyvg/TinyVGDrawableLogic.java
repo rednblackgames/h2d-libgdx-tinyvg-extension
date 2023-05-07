@@ -37,4 +37,14 @@ public class TinyVGDrawableLogic implements DrawableLogic {
 
         TransformMathUtils.resetTransform(batch, transformComponent);
     }
+
+    @Override
+    public void beginPipeline() {
+
+    }
+
+    @Override
+    public void endPipeline() {
+
+    }
 }
