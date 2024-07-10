@@ -1,6 +1,7 @@
 package games.rednblack.h2d.extension.tinyvg;
 
 import com.artemis.ComponentMapper;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import dev.lyze.gdxtinyvg.drawers.TinyVGShapeDrawer;
 import games.rednblack.editor.renderer.SceneLoader;
@@ -22,6 +23,7 @@ public class TinyVGDrawableLogic implements DrawableLogic {
 
     @Override
     public void draw(Batch batch, int entity, float parentAlpha, RenderingType renderingType) {
+        batch.setBlendFunctionSeparate(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA, GL20.GL_ONE_MINUS_DST_ALPHA, GL20.GL_ONE);
         if (drawer == null)
             drawer = new CpuTinyVGShapeDrawer(batch, sceneLoader.getRm().getTextureRegion("white-pixel"));
 
