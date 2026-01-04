@@ -1,6 +1,6 @@
 package games.rednblack.h2d.extension.tinyvg;
 
-import com.artemis.ComponentMapper;
+import games.rednblack.editor.renderer.ecs.ComponentMapper;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import dev.lyze.gdxtinyvg.drawers.TinyVGShapeDrawer;
